@@ -1,0 +1,249 @@
+ 1452  conda create -n mtb_project\
+ 1453  conda create -n mtb_project \ fastqc \ fastp \ bwa \ samtools \ bcftools \ snpeff \ multiqc \ wget \ curl \ unzip \ git \ openjdk \ -r conda-forge \ -c bioconda --strict-channel-priority
+ 1454  conda create -n mtb_project fastqc fastp bwa samtools bcftools snpeff multiqc wget curl unzip git openjdk -c conda-forge -c bioconda --strict-channel-priority
+ 1455  conda activate mtb_project
+ 1456  fastqc --version
+ 1457  fastp --version
+ 1458  bwa --version
+ 1459  bwa
+ 1460  samtools --version
+ 1461  bcftools --version
+ 1462  snpeff --version
+ 1463  snpEff --version
+ 1464  snpEff -version
+ 1465  clear
+ 1466  --ls lrt
+ 1467  -ls lrt
+ 1468  ls lrt
+ 1469  ls -lrt
+ 1470  {echo "=====SOFTWARE VERSIONS=====" date echo echo "FastQC:" fastqc --version echo echo "fastp:" fastp --version echo echo "BWA:" bwa 2>&1 | head -2 echo echo "SAMtools:" echo samtools --version| head -1 echo echo "BCFtools:" echo bcftools --version|head -1 echo echo "SnpEff:" echo snpEff -version} | tee results/software_versions.txt
+ 1471  {echo "=====SOFTWARE VERSIONS=====" date echo echo"FastQC:" fastqc --version echo echo"fastp:" fastp --version echo echo"BWA:" bwa 2>&1 | head -2 echo echo"SAMtools:" echo samtools --version| head -1 echo echo"BCFtools:" echo bcftools --version|head -1 echo echo"SnpEff:" echo snpEff -version} | tee results/software_versions.txt
+ 1472  {echo "=====SOFTWARE VERSIONS=====" date echo echo "FastQC:" fastqc --version echo echo "fastp:" fastp --version echo echo "BWA:" bwa 2>&1 | head -2 echo echo "SAMtools:" echo samtools --version| head -1 echo echo "BCFtools:" echo bcftools --version|head -1 echo echo "SnpEff:" echo snpEff -version} | tee results/software_versions.txt
+ 1473  { echo "====SOFTWARE VERSIONS====="; date; echo; echo "FastQC:"; fastqc --version; echo; echo "fastp:"; fastp --version; echo; echo "BWA:"; bwa 2>&1 | head -2; echo; echo "SAMtools:"; samtools --version| head -1; echo; echo "BCFtools:"; bcftools --version|head -1; echo; echo "SnpEff:"; snpEff -version; }
+ 1474  { echo "====SOFTWARE VERSIONS====="; date; echo; echo "FastQC:"; fastqc --version; echo; echo "fastp:"; fastp --version; echo; echo "BWA:"; bwa 2>&1 | head -2; echo; echo "SAMtools:"; samtools --version| head -1; echo; echo "BCFtools:"; bcftools --version|head -1; echo; echo "SnpEff:"; snpEff -version; } | tee results\software_versions.txt
+ 1475  { echo "====SOFTWARE VERSIONS====="; date; echo; echo "FastQC:"; fastqc --version; echo; echo "fastp:"; fastp --version; echo; echo "BWA:"; bwa 2>&1 | head -3; echo; echo "SAMtools:"; samtools --version| head -1; echo; echo "BCFtools:"; bcftools --version|head -1; echo; echo "SnpEff:"; snpEff -version; } | tee results\software_versions.txt
+ 1476  ls -lh
+ 1477  { echo "====SOFTWARE VERSIONS====="; date; echo; echo "FastQC:"; fastqc --version; echo; echo "fastp:"; fastp --version; echo; echo "BWA:"; bwa 2>&1 | head -3; echo; echo "SAMtools:"; samtools --version| head -1; echo; echo "BCFtools:"; bcftools --version|head -1; echo; echo "SnpEff:"; snpEff -version; } | tee results/software_versions.txt
+ 1478  ls -lrt
+ 1479  ls -a
+ 1480  ls -lh
+ 1481  rm resultssoftware_versions.txt 
+ 1482  cd results/
+ 1483  l
+ 1484  cat software_versions.txt 
+ 1485  cd ../reference/
+ 1486  l
+ 1487  "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz"
+ 1488  wget -c "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz"
+ 1489  wget -c "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.gff.gz"
+ 1490  wget -c "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.gbff.gz"
+ 1491  ls -lrt
+ 1492  gunzip *.gz
+ 1493  ls -lrt
+ 1494  mv GCF_000195955.2_ASM19595v2_genomic.fna NC_000962.3.fasta
+ 1495  mv GCF_000195955.2_ASM19595v2_genomic.gff NC_000962.3.gff
+ 1496  mv GCF_000195955.2_ASM19595v2_genomic.gbff NC_000962.3.gbff
+ 1497  ls 0lh
+ 1498  ls -lh
+ 1499  grep "^>" NC_000962.3.fasta 
+ 1500  samtools faidx NC_000962.3.fasta 
+ 1501  cut -f1,2 NC_000962.3.fasta.fai 
+ 1502  bwa index NC_000962.3.fasta
+ 1503  ls -lrt
+ 1504  cd Project_01/
+ 1505  ls -lrt
+ 1506  ls -lh
+ 1507  conda activate mtb_project
+ 1508  fastqc raw_data/ERR5987300_1.fastq.gz raw_data/ERR5987300_2.fastq.gz -o qc
+ 1509  fastqc raw_data/ERR5987300_1.fastq.gz raw_data/ERR5987300_2.fastq.gz -o qc/
+ 1510  fastqc raw_data/ERR5987300_1.fastq.gz raw_data/ERR5987300_2.fastq.gz --outdir qc/
+ 1511  ls -lrt qc/
+ 1512  multiqc qc/ -o qc/multiqc_raw
+ 1513  ls -lrt qc/
+ 1514  ls -lrt qc/multiqc_raw/
+ 1515  ls -lrt qc/multiqc_raw/multiqc_data/
+ 1516  cat qc/multiqc_raw/multiqc_report.html 
+ 1517  fastp -i raw_data/ERR5987300_1.fastq.gz -l raw_data/ERR5987300_2.fastq.gz -o trimmed_reads/ERR5987300_1.trimmed.fastq.gz -O trimmed_reads/ERR5987300_2.trimmed.fastq.gz -h qc/ERR5987300_fastp.html -j qc/ERR5987300_fastp.json -w 4
+ 1518  fastp -i raw_data/ERR5987300_1.fastq.gz -I raw_data/ERR5987300_2.fastq.gz -o trimmed_reads/ERR5987300_1.trimmed.fastq.gz -O trimmed_reads/ERR5987300_2.trimmed.fastq.gz -h qc/ERR5987300_fastp.html -j qc/ERR5987300_fastp.json -w 4
+ 1519  ls -lrt trimmed_reads/
+ 1520  ls -lrt qc/
+ 1521  history
+ 1522  clear
+ 1523  fastqc trimmed_reads/ERR5987300_1.trimmed.fastq.gz trimmed_reads/ERR5987300_2.trimmed.fastq.gz --outdir qc/
+ 1524  multiqc qc/ -o qc/multiqc_after_trimming
+ 1525  ls -lrt reference/
+ 1526  bwa mem -t 4 -R "@RG\tID:ERR5987300\tSM:ERR5987300\tPL:ILLUMINA" reference/NC_000962.3.fasta trimmed_reads/ERR5987300_1.trimmed.fastq.gz trimmed_reads/ERR5987300_2.trimmed.fastq.gz | samtools sort -@ 4 -o alignment/ERR5987300.sorted.bam
+ 1527  ls -lh alignment/
+ 1528  samtools index alignment/ERR5987300.sorted.bam 
+ 1529  ls -lh alignment/
+ 1530  samtools flagstat alignment/ERR5987300.sorted.bam > alignment/ERR5987300.flagstat.txt
+ 1531  cat alignment/ERR5987300.flagstat.txt 
+ 1532  samtools stats alignment/ERR5987300.sorted.bam > alignment/ERR5987300.stats.txt
+ 1533  ls -lrt alignment/
+ 1534  cat alignment/ERR5987300.stats.txt 
+ 1535  samtools coverage alignment/ERR5987300.sorted.bam > alignment/ERR5987300.coverage.txt
+ 1536  samtools depth alignment/ERR5987300.sorted.bam > alignment/ERR5987300.depth.txt
+ 1537  awk '{sum+=$3;n++} END {print "Average depth:",sum/n}' alignment/ERR5987300.depth.txt
+ 1538  grep "^SN" alignment/ERR5987300.stats.txt 
+ 1539  samtools depth -a alignment/ERR5987300.sorted.bam | awk '{sum+=$3; n++} END {if (n>0) print "Average depth:",sum/n; else print "No positions found"}'
+ 1540  bcftools mpileup -f reference/NC_000962.3.fasta -q 20 -Q 20 -d 10000 -a FORMAT/AD, FORMAT/DP -Ou alignment/ERR5987300.sorted.bam | bcftools call --ploidy 1 -mv -Oz -o variants/ER5987300.raw.vcf.gz
+ 1541  bcftools mpileup -f reference/NC_000962.3.fasta -q 20 -Q 20 -d 10000 -a FORMAT/AD,FORMAT/DP -Ou alignment/ERR5987300.sorted.bam | bcftools call --ploidy 1 -mv -Oz -o variants/ER5987300.raw.vcf.gz
+ 1542  cd variants/
+ 1543  l
+ 1544  mv ER5987300.raw.vcf.gz ERR5987300.raw.vcf.gz
+ 1545  l
+ 1546  cd ..
+ 1547  bcftools index -t variants/ERR5987300.raw.vcf.gz
+ 1548  ncftools view -H variants/ERR5987300.raw.vcf.gz|head
+ 1549  bcftools view -H variants/ERR5987300.raw.vcf.gz|head
+ 1550  bcftools norm -f reference/NC_000962.3.fasta -Oz -o variants/ERR5987300.normalized.vcf.gz variants/ERR5987300.raw.vcf.gz
+ 1551  bcftools index -t variants/ERR5987300.normalized.vcf.gz 
+ 1552  bcftools view -i 'QUAL>=30 && FORMAT/DP>=10' -Oz -o variants/ERR5987300.filtered.vcf.gz variants/ERR5987300.normalized.vcf.gz
+ 1553  bcftools index -t variants/ERR5987300.filtered.vcf.gz 
+ 1554  echo "Raw variants:"
+ 1555  echo "Raw variants:" bcftools view -H variants/ERR5987300.raw.vcf.gz | wc -l
+ 1556  echo "Raw variants:" bcftools view -H variants/ERR5987300.raw.vcf.gz
+ 1557  echo "Raw variants:"
+ 1558  bcftools view -H variants/ERR5987300.raw.vcf.gz | wc -l
+ 1559  bcftools view -H variants/ERR5987300.filtered.vcf.gz | wc -l
+ 1560  bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t%QUAL\t%INFO/DP\t[%DP]\n' variants/ERR5987300.filtered.vcf.gz > results/ERR5987300_variants.tsv
+ 1561  ls -lrt results/
+ 1562  head results/ERR5987300_variants.tsv 
+ 1563  cd Project_01/
+ 1564  conda activate mtb_project
+ 1565  haed results/ERR5987300_variants.tsv 
+ 1566  head results/ERR5987300_variants.tsv
+ 1567  snpEff databases | grep -i "Mycobacterium_tuberculosis_h37rv"
+ 1568  snpEff download Mycobacterium_tuberculosis_h37rv
+ 1569  snpEff databases | grep -i "Mycobacterium_tuberculosis_h37rv"
+ 1570  print "NC_000962.3\tChromosome\n" > annotation/chromosome_map.txt
+ 1571  printf "NC_000962.3\tChromosome\n" > annotation/chromosome_map.txt
+ 1572  bcftools annoatate --rename-chrs annotation/chromosome_map.txt -Oz -o annotation/ERR5987300.snpeff_input.vcf.gz variants/ERR5987300.filtered.vcf.gz
+ 1573  bcftools annotate --rename-chrs annotation/chromosome_map.txt -Oz -o annotation/ERR5987300.snpeff_input.vcf.gz variants/ERR5987300.filtered.vcf.gz
+ 1574  bcftools index -t annotation/ERR5987300.snpeff_input.vcf.gz
+ 1575  snpEff Mycbacterium_tuberculosis_h37_rv annotation/ERR5987300.snpeff_input.vcf.gz > annotation/ERR5987300.annotated.vcf
+ 1576  snpEff databases | grep -i "Mycobacterium_tuberculosis_h37rv"
+ 1577  printf "NC_000962.3\tChromosome\n" > annotation/chromosome_map.txt
+ 1578  bcftools annotate --rename-chrs annotation/chromosome_map.txt -Oz -o annotation/ERR5987300.snpeff_input.vcf.gz variants/ERR5987300.filtered.vcf.gz
+ 1579  bcftools index -t annotation/ERR5987300.snpeff_input.vcf.gz
+ 1580  snpEff Mycobacterium_tuberculosis_h37_rv annotation/ERR5987300.snpeff_input.vcf.gz > annotation/ERR5987300.annotated.vcf
+ 1581  snpEff Mycobacterium_tuberculosis_h37rv annotation/ERR5987300.snpeff_input.vcf.gz > annotation/ERR5987300.annotated.vcf
+ 1582  snpEff -stats annotation/ERR5987300_snpEff_summary.html Mycobacterium_tuberculosis_h37rv annotation/ERR5987300.snpeff_input.vcf.gz > annotation/ERR5987300.annotated.vcf
+ 1583  ls -lrt annotation/
+ 1584  vi annotation/ERR5987300_snpEff_summary.html 
+ 1585  SnpSift extractfields annotation/ERR5987300.annotated.vcf  CHROM POS REF ALT QUAL 'ANN[*].GENE' 'ANN[*].EFFECT' 'ANN[*].IMPACT' 'ANN[*].HGVS_C' 'ANN[*].HGVS_P' > results/ERR5987300_annotated_variants.tsv
+ 1586  snpSift extractfields annotation/ERR5987300.annotated.vcf  CHROM POS REF ALT QUAL 'ANN[*].GENE' 'ANN[*].EFFECT' 'ANN[*].IMPACT' 'ANN[*].HGVS_C' 'ANN[*].HGVS_P' > results/ERR5987300_annotated_variants.tsv
+ 1587  sudo apt install snpsift
+ 1588  snpSift extractfields annotation/ERR5987300.annotated.vcf  CHROM POS REF ALT QUAL 'ANN[*].GENE' 'ANN[*].EFFECT' 'ANN[*].IMPACT' 'ANN[*].HGVS_C' 'ANN[*].HGVS_P' > results/ERR5987300_annotated_variants.tsv
+ 1589  ls -lh results/
+ 1590  head -10 results/ERR5987300_annotated_variants.tsv 
+ 1591  grep -i "rpoB" results/ERR5987300_annotated_variants.tsv 
+ 1592  grep -i "katG" results/ERR5987300_annotated_variants.tsv 
+ 1593  grep -i "gyrA" results/ERR5987300_annotated_variants.tsv 
+ 1594  {echo -e "Gene\tDrug"
+ 1595  { echo -e "Gene\tDrug"; echo -e "rpoB\tRifampicin"; echo -e "katG\tIsoniazid"; echo -e "gyrA\tFluoroquinolones"; } > results/mandatory_genes.tsv
+ 1596  cat results/mandatory_genes.tsv 
+ 1597  conda deactivate
+ 1598  conda create -n tb-profiler tb-profiler
+ 1599  conda activate tb-profiler
+ 1600  tb-profiler --help
+ 1601  tb-profiler update_tbdb
+ 1602  tb-profiler profile -1 raw_data/ERR5987300_1.fastq.gz -2 raw_data/ERR5987300_2.fastq.gz -t 4 -p ERR5987300 --txt --csv
+ 1603  clear
+ 1604  tb-profiler update_tbdb
+ 1605  tb profiler --version
+ 1606  tb-profiler --version
+ 1607  conda deactivate
+ 1608  conda activate mtb_project
+ 1609  tb-profiler --version
+ 1610  conda activate tb-profiler
+ 1611  conda env list
+ 1612  tb-profiler --help
+ 1613  history
+ 1614  tb-profiler update_tbdb
+ 1615  clear
+ 1616  cd Project_01/
+ 1617  tb-profiler update_tbdb
+ 1618  ls -ld ~/Project_01/tbdb/
+ 1619  ls -lrt tbdb/
+ 1620  ls -lrt tbdb/scripts/
+ 1621  find tbdb -name "parse_db.py"
+ 1622  tb-profiler --version
+ 1623  tb-profiler --help
+ 1624  tb-profiler -version
+ 1625  tb-profiler version
+ 1626  conda list tb-profiler
+ 1627  ls -lrt tbdb/scripts/
+ 1628  conda deactivate
+ 1629  conda create -n tb-profiler-new -c conda-forge -c bioconda tb-profiler
+ 1630  conda activate tb-profiler-new
+ 1631  tb-profiler version
+ 1632  conda list tb-profiler
+ 1633  tb-profiler update_tbdb
+ 1634  tb-profiler profile -1 raw_data/ERR5987300_1.fastq.gz raw_data/ERR5987300_2.fastq.gz -t 4 -p ERR5987300 --txt --csv
+ 1635  tb-profiler profile -1 raw_data/ERR5987300_1.fastq.gz -2 raw_data/ERR5987300_2.fastq.gz -t 4 -p ERR5987300 --txt --csv
+ 1636  find .-iname "*ERR5987300*"
+ 1637  find .-iname"*ERR5987300*"
+ 1638  find.-iname "*ERR5987300*"
+ 1639  find . -iname "*ERR5987300*"
+ 1640  cat results/ERR5987300.results.txt 
+ 1641  cat results/ERR5987300.results.json 
+ 1642  cd Project_01/
+ 1643  lsb release -a
+ 1644  lsb_release -a
+ 1645  java -version
+ 1646  ls
+ 1647  chmod +x igv.sh 
+ 1648  ./igv.sh 
+ 1649  igv
+ 1650  find . -type f \( -name "*.vcf" -o -name "*.vcf.gz" -o -name "*annotated_variants.tsv" \)
+ 1651  grep -w "761155" results/ERR5987300_annotated_variants.tsv
+ 1652  grep -w "763031" results/ERR5987300_annotated_variants.tsv
+ 1653  cat results/ERR5987300.results.txt
+ 1654  grep -w "2154724" results/ERR5987300_annotated_variants.tsv
+ 1655  grep -w "7362" results/ERR5987300_annotated_variants.tsv
+ 1656  grep -w "7585" results/ERR5987300_annotated_variants.tsv
+ 1657  grep -w "9304" results/ERR5987300_annotated_variants.tsv
+ 1658  ls -lrt results/
+ 1659  cat results/ERR5987300_variants.tsv 
+ 1660  ls -lrt results/
+ 1661  cat results/ERR5987300_annotated_variants.tsv 
+ 1662  ls -lrt results/
+ 1663  cat results/mandatory_genes.tsv 
+ 1664  cat results/ERR5987300.results.txt 
+ 1665  clear
+ 1666  history
+ 1667  cd Downloads/
+ 1668  ls -lrt
+ 1669  cd IGV_Linux_2.19.8_WithJava/IGV_Linux_2.19.8/
+ 1670  l
+ 1671  pwd
+ 1672  nano ~/.bashrc
+ 1673  source ~/.bashrc
+ 1674  igv
+ 1675  nano ~/.bashrc
+ 1676  source ~/.bashrc
+ 1677  igv
+ 1678  clear
+ 1679  igv
+ 1680  cd Project_01/
+ 1681  cat alignment/ERR5987300.flagstat.txt 
+ 1682  ls alignment/*coverage*
+ 1683  cat alignment/ERR5987300.coverage.txt 
+ 1684  bcftools view -H variants/ERR5987300.raw.vcf.gz | wc -l
+ 1685  bcftools view -H variants/ERR5987300.filtered.vcf.gz | wc -l
+ 1686  zcat raw_data/ERR5987300_1.fastq.gz | awk 'END {print NR/4}'
+ 1687  zcat raw_data/ERR5987300_2.fastq.gz | awk 'END {print NR/4}'
+ 1688  zcat trimmed_reads/ERR5987300_1.trimmed.fastq.gz | awk 'END {print NR/4}'
+ 1689  zcat trimmed_reads/ERR5987300_2.trimmed.fastq.gz | awk 'END {print NR/4}'
+ 1690  history
+ 1691  grep -w "2154724" results/ERR5987300_annotated_variants.tsv
+ 1692  cd Project_01/
+ 1693  grep -w "2154724" results/ERR5987300_annotated_variants.tsv
+ 1694  grep -w "7362" results/ERR5987300_annotated_variants.tsv
+ 1695  grep -w "7585" results/ERR5987300_annotated_variants.tsv
+ 1696  grep -w "9304" results/ERR5987300_annotated_variants.tsv
+ 1697  clear
+ 1698  ls lh results/*.xlsx
+ 1699  ls -lh results/*.xlsx
+ 1700  history > results/command_history.txt

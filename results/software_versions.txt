@@ -1,0 +1,22 @@
+====SOFTWARE VERSIONS=====
+Wed Oct 21 01:55:25 AM IST 2026
+
+FastQC:
+FastQC v0.13.0
+
+fastp:
+fastp 1.4.0
+
+BWA:
+
+Program: bwa (alignment via Burrows-Wheeler transformation)
+Version: 0.7.19-r1273
+
+SAMtools:
+samtools 1.24
+
+BCFtools:
+bcftools 1.24
+
+SnpEff:
+SnpEff	5.4c	2026-02-23

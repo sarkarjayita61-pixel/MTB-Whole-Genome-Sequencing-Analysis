@@ -1,0 +1,2 @@
+run_accession	study_accession	sample_accession	library_layout	instrument_platform	fastq_ftp	fastq_md5	fastq_bytes
+ERR5987300	PRJEB45389	SAMEA9070553	PAIRED	ILLUMINA	ftp.sra.ebi.ac.uk/vol1/fastq/ERR598/000/ERR5987300/ERR5987300_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR598/000/ERR5987300/ERR5987300_2.fastq.gz	90a4e049c0d3a55d38de1b50653822f5;5facd6a5b0efb3942e21c5903706b735	152166079;152855884

@@ -1,0 +1,3 @@
+Sample accession:ERR5987300
+Reference: Mycobacterium tuberculosis H37Rv
+Reference accession: NC_000962.3

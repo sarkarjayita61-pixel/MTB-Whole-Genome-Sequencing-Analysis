@@ -1,0 +1,53 @@
+# Raw sequencing data
+raw_data/
+trimmed_reads/
+
+# Alignment files
+bam/
+*.bam
+*.bai
+*.cram
+*.crai
+
+# Reference genome and indexes
+reference/*.fasta
+reference/*.fasta.*
+reference/*.fna
+reference/*.fa
+
+# TB-Profiler database
+tbdb/
+
+# Exclude intermediate VCF files
+variants/*.raw.vcf.gz*
+variants/*.normalized.vcf.gz*
+vcf/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Conda environments
+.conda/
+
+# Large alignment outputs
+alignment/*.bam
+alignment/*.bai
+alignment/*.depth.txt
+
+# Reference genome and indexes
+reference/*.fasta*
+reference/*.fai
+
+# Intermediate VCF files
+variants/*.raw.vcf.gz*
+variants/*.normalized.vcf.gz*
+variants/*.filtered.vcf.gz*
+vcf/
+
+# Large sequencing data
+raw_data/
+trimmed_reads/
+bam/
+tbdb/
