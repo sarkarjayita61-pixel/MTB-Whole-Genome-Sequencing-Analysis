@@ -242,6 +242,6 @@ The reference annotation files, quality-control reports, alignment statistics, v
 - The integration of BCFtools, SnpEff, TB-Profiler and IGV helped develop an understanding of how genomic variations can be investigated in the context of antimicrobial drug resistance.
 - The identification and investigation of the rpoB p.Ser450Leu mutation highlight the application of WGS-based approaches in studying mutations associated with anti-tuberculosis drug resistance.
 
-##Acknowledgement
+## Acknowledgement
 
 This work was undertaken as part of a one-month bioinformatics internship by BioTechTrek  focusing on the identification of drug-resistance-associated mutations in Mycobacterium tuberculosis using Whole Genome Sequencing.
