@@ -150,7 +150,8 @@ This finding was investigated using SnpEff annotation, TB-profiler results and I
 
 Variants in katG and gyrA were also reviewed because these genes are relevant to isoniazid and fluoroquinolone resistance, respectively. The detected variant in katG gene was p.Arg463Leu and the detected variants in gyrA genes were p.Glu21Gln, p.Ser95Thr and p.Gly668Asp consecutively. All the variants were inspected and compared with TB-Profiler output.  A further nucleotide change in the rpoB region i.e. p.Ala1075Ala (position 763031, T>C) was also noted, but it was not used as the principal finding.
 
-*Interpretation:* The rpoB p.Ser450Leu mutation was the main resistance-associated finding supported by the combined analysis. These are computational findings and should not be considered a substitute for phenotypic drug susceptibility testing.
+## Interpretation
+The rpoB p.Ser450Leu mutation was the main resistance-associated finding supported by the combined analysis. These are computational findings and should not be considered a substitute for phenotypic drug susceptibility testing.
 The other missense variants examined in katG and gyrA genes were not treated as confirmed drug-resistance determinants in this project because a corresponding resistance prediction was not established by the comparison with existing TB-profiler database.
 
 ## Repository Structure
@@ -220,7 +221,7 @@ The `results/command_history.txt` file contains the recorded analysis commands, 
 
 The reference annotation files, quality-control reports, alignment statistics, variant annotation outputs and result tables are provided to support examination of the analysis.
 
-##Skills Developed
+## Skills Developed
 
 - Whole Genome Sequencing (WGS) data analysis.
 - NGS quality control and read preprocessing.
