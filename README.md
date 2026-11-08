@@ -146,9 +146,12 @@ The rpoB p.Ser450Leu mutation is a well-known mutation associated with rifampici
 
 This finding was investigated using SnpEff annotation, TB-profiler results and IGV visualization.
 
-Other selected variants, including variants in genes such as gyrA and katG, were also examined. However, not all identified missense variants could be independently confirmed as drug resistance-associated findings by TB-profiler.
+## Other Resistance-Associated Genes Examined
+
+Variants in katG and gyrA were also reviewed because these genes are relevant to isoniazid and fluoroquinolone resistance, respectively. The detected variant in katG gene was p.Arg463Leu and the detected variants in gyrA genes were p.Glu21Gln, p.Ser95Thr and p.Gly668Asp consecutively. All the variants were inspected and compared with TB-Profiler output.  A further nucleotide change in the rpoB region i.e. p.Ala1075Ala (position 763031, T>C) was also noted, but it was not used as the principal finding.
 
 *Interpretation:* The rpoB p.Ser450Leu mutation was the main resistance-associated finding supported by the combined analysis. These are computational findings and should not be considered a substitute for phenotypic drug susceptibility testing.
+The other missense variants examined in katG and gyrA genes were not treated as confirmed drug-resistance determinants in this project because a corresponding resistance prediction was not established by the comparison with existing TB-profiler database.
 
 ## Repository Structure
 
