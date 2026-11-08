@@ -88,7 +88,7 @@ The analysis is followed by these steps:
 
 The software environment was managed using Conda.
 
-##Target Genes Function
+## Target Genes Function
 
 The downstream investigation focused on three important genes:
 
