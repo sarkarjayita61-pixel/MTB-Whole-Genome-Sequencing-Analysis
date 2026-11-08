@@ -1,4 +1,4 @@
-# Identification of Drug-resistance Based Mutations  in Mycobacterium tuberculosis using Whole Genome Sequencing Data
+# Identification of Drug-resistance Associated Mutations  in Mycobacterium tuberculosis using Whole Genome Sequencing Data
 
 ## Project Overview
 
